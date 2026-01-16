@@ -1,0 +1,28 @@
+
+
+- abbreviations
+  - `c.g.` : centre of gravity
+- Motor installation
+  - Hub motor
+    - simple to install
+      - swap the rear wheel for a 135×9 mm hub motor wheel
+        - many 48 V kits available up to 1,000 W
+      - plug in controller/display
+    - inexpensive
+    - preserves the 1×8 drivetrain
+      - no midification required
+      - less wear than mid-drive
+  - Mid-drive
+    - support higher powered motors
+    - $c.g.$ towards centre
+      - better offload performance
+- Battery installation
+  - Dual-pack swap enabled
+    - easier replacement
+    - take out one to reduce weight
+      - daily commutes, etc.
+  - Energy budget
+    - $\approx 10–15 Wh/km$
+      -  $100 km : \approx 1,000–1,500 Wh$
+  - Fast recharge (<3 h)
+    - $\approx 0.5–1C$

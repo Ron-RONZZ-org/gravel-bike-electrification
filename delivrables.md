@@ -6,13 +6,19 @@
 
 ## requirements
 
-- A/B mode
-  - European road conforme mode : 25km/h limit
-  - offroad free mode : maximum power output
-- budget : €2000 euro
+- R/OR mode
+  - R : European road conforme mode : 25km/h limit
+  - OR: offroad free mode : maximum power output
+- budget : €3000 euro
   - 2nd hand/refabricated parts accepted
   - prioritise easy installation without specialist tool
+- use case : mixed
+  - city
+  - offroad
 - <30 kg total : possibility to ride as normal bike
+  - bike itself weights ~12kg
+- distance per charge : 100 km
+- recharge time : < 3h
 
 ## delivrables for TP-bike-electrification
 
@@ -26,7 +32,18 @@
     - intro : requirements and limitations
       - technical data
     - identify : 3 candidates
+      - complete installation set
+        - battery
+        - motor
+        - electronic controls units
+      - in detail
+        - brand
+        - model
+        - price
+      - critical analysis
+        - table summary
+        - pros&cons comparison
     - present : final solution
     - evaluate : with regards to a ready-made electric bike
     - conclusion
-  - citation : ISO-690:2010
+  - citation : ISO-690:2010 format
