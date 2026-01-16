@@ -5,7 +5,7 @@ This repository contains research and documentation for electrifying the VAN RYS
 ## Contents
 
 - **`electrification-report.md`** - Comprehensive English report analyzing electrification solutions
-- **`delivrables.md`** - Project requirements and deliverables specification
+- **`delivrables.md`** - Project requirements and deliverables specification (note: original filename preserved)
 - **`solution-proposals.md`** - Technical notes on motor and battery installation approaches
 - **`presentation-bike-electrification.pdf`** - Supporting presentation materials
 
