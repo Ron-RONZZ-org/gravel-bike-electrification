@@ -1,0 +1,26 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz(busy)
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*-blx.bib
+*.dvi
+*.ps
+*.gf
+*.tfm
+
+# Keep the PDF outputs
+!*.pdf
