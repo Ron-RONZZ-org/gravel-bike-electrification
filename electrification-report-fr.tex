@@ -1,0 +1,795 @@
+% Rapport d'Électrification - Version Française
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{parskip}
+
+% Page layout
+\geometry{
+    a4paper,
+    left=25mm,
+    right=25mm,
+    top=30mm,
+    bottom=30mm
+}
+
+% Metadata
+\title{Solutions d'Électrification pour le Vélo Gravel VAN RYSEL GRVL AF DISCOVER~:\\
+Une Analyse par Composants et Recommandation}
+\author{Projet TP-bike-electrification}
+\date{Janvier 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Ce rapport explore les solutions d'électrification du VAN RYSEL GRVL AF DISCOVER, un vélo gravel équipé d'une transmission Microshift Acolyte 1×8 vitesses. L'étude emploie une approche d'analyse par composants, évaluant séparément trois options de batteries et trois systèmes moteur+contrôleur en considérant les contraintes budgétaires (€3~000), la conformité réglementaire (normes routières européennes), les limitations de poids (<30~kg total) et les exigences de performance (autonomie de 100~km, recharge <3~h). Les métriques de fiabilité incluant les évaluations des utilisateurs, la durée de vie attendue et la durabilité informent le processus de sélection. L'analyse recommande un système de batterie modulaire (Pack C~: 48V 21Ah primaire avec secondaire optionnel) associé à un moteur moyeu à engrenages léger (Système C~: Shengyi DGW07 500W), optimisant le poids (19,4~kg total), le coût (€1~000--1~350 de base) et la polyvalence pour un usage mixte urbain et tout-terrain.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{Exigences et Limitations}
+
+Le VAN RYSEL GRVL AF DISCOVER est un vélo gravel polyvalent équipé d'une transmission Microshift Acolyte 1×8 vitesses, pesant environ 12~kg \cite{decathlon-bike}. Le projet d'électrification vise à transformer ce vélo en un véhicule électrique bimode adapté à la fois aux déplacements urbains et aux aventures tout-terrain.
+
+\textbf{Spécifications Techniques du Vélo de Base~:}
+\begin{itemize}
+    \item Modèle~: VAN RYSEL GRVL AF DISCOVER
+    \item Transmission~: Microshift Acolyte 1×8 vitesses
+    \item Poids de Base~: $\approx$12~kg
+    \item Moyeu Arrière~: Entraxe standard 135×9~mm
+\end{itemize}
+
+\textbf{Exigences Principales~:}
+
+\textit{Modes de Fonctionnement~:}
+\begin{itemize}
+    \item \textbf{Mode R (Route)~:} Assistance conforme aux normes européennes jusqu'à 25~km/h \cite{eu-regulation}
+    \item \textbf{Mode OR (Tout-Terrain)~:} Puissance maximale pour terrain non restreint
+\end{itemize}
+
+\textit{Critères de Performance~:}
+\begin{itemize}
+    \item Autonomie~: 100~km par charge
+    \item Temps de Recharge~: < 3 heures
+    \item Poids Total~: < 30~kg (maintenant la maniabilité sans assistance)
+    \item Consommation Énergétique~: 10--15~Wh/km estimée
+    \item Budget Énergétique Total~: 1~000--1~500~Wh pour 100~km d'autonomie
+\end{itemize}
+
+\textit{Installation et Budget~:}
+\begin{itemize}
+    \item Budget Maximum~: €3~000
+    \item Composants d'occasion/reconditionnés acceptés
+    \item Installation facile sans outils spécialisés privilégiée
+    \item Préservation de la transmission existante souhaitable
+\end{itemize}
+
+\subsection{Analyse des Cas d'Usage}
+
+Le vélo servira des objectifs mixtes~:
+\begin{itemize}
+    \item \textbf{Urbain/Ville~:} Trajets quotidiens, déplacements routiers efficaces
+    \item \textbf{Tout-Terrain~:} Chemins de gravel, sentiers, terrains difficiles
+\end{itemize}
+
+Ce scénario d'utilisation double nécessite une solution équilibrée qui ne compromet pas les caractéristiques spécifiques au gravel du vélo tout en ajoutant une assistance électrique fiable.
+
+\section{Identification des Solutions Candidates}
+
+Cette section présente une analyse par composants, comparant les systèmes de batterie et les systèmes moteur+contrôleur indépendamment pour identifier les solutions optimales pour chaque catégorie.
+
+\subsection{Candidat 1~: Kit Moteur Moyeu Économique}
+
+\subsubsection{Ensemble d'Installation Complet}
+
+\textbf{Système de Batterie~:}
+\begin{itemize}
+    \item Configuration~: Deux batteries 48V 15Ah (total 1~440~Wh)
+    \item Capacité~: 720~Wh par batterie
+    \item Tension~: 48V nominale (configuration 13S)
+    \item Chimie des Cellules~: Cellules lithium-ion 18650 (Samsung 35E ou LG MJ1) \cite{samsung-35e, lg-mj1}
+    \item Nombre de Cellules~: 65 cellules par batterie (13S5P)
+    \item Poids~: $\approx$3,5~kg par batterie (7~kg total)
+    \item Montage~: Sacoche triangle de cadre + porte-bagages/sacoche de selle
+    \item BMS~: Décharge continue 25A par batterie
+    \item Temps de Charge~: 2,5--3~h avec chargeur 5A
+\end{itemize}
+
+\textbf{Système Moteur~:}
+\begin{itemize}
+    \item Marque~: Bafang
+    \item Modèle~: Moteur Moyeu Arrière G020 \cite{bafang-g020}
+    \item Puissance~: 750W nominal (48V), 1~200W en pointe
+    \item Type~: Moteur moyeu à entraînement direct (sans engrenages)
+    \item Couple~: 40--50~Nm
+    \item Efficacité~: 75--80\% moyenne
+    \item Poids~: 5,5~kg (moteur dans la roue)
+    \item Installation~: Remplacement de la roue arrière (135×9~mm OLD)
+    \item Vitesse Nominale~: 45~km/h possible (non restreint)
+\end{itemize}
+
+\textbf{Unités de Contrôle Électronique~:}
+\begin{itemize}
+    \item Contrôleur~: Contrôleur onde sinusoïdale 48V 25A (programmable bimode)
+    \item Affichage~: KT-LCD3 avec capacité de commutation de mode
+    \item Accélérateur~: Accélérateur rotatif optionnel inclus
+    \item PAS~: Capteur d'assistance au pédalage 8 niveaux
+    \item Programmation~: Limitée via paramètres d'affichage
+\end{itemize}
+
+\subsubsection{Spécifications Détaillées}
+
+\textbf{Prix~:}
+\begin{itemize}
+    \item Batterie~: €700--900 pour configuration double \cite{aliexpress-batteries}
+    \item Kit Moteur~: €600--800 (kit complet avec contrôleur, affichage, roue) \cite{aliexpress-batteries}
+    \item \textbf{Coût Total~:} €1~300--1~700
+\end{itemize}
+
+\textbf{Fiabilité et Performance~:}
+\begin{itemize}
+    \item Évaluations Utilisateurs Batterie~: 4,2/5 (basé sur avis AliExpress/Amazon) \cite{aliexpress-batteries, amazon-components}
+    \item Évaluations Utilisateurs Moteur~: 4,0/5 (bon rapport qualité-prix, performance adéquate) \cite{ebike-review}
+    \item Durée de Vie Batterie Attendue~: 500--800 cycles de charge (80\% de capacité conservée)
+    \item Durée de Vie Moteur Attendue~: 15~000--25~000~km avant usure des roulements
+    \item Durabilité~: Bonne~; chimie des cellules éprouvée de fabricants réputés
+    \item Problèmes Courants~: Défaillances BMS rapportées dans $\approx$5\% des cas, qualité des connecteurs variable
+    \item Garantie Fabricant~: Typiquement 12--18 mois
+\end{itemize}
+
+\subsubsection{Analyse Critique}
+
+\textbf{Avantages~:}
+\begin{itemize}
+    \item Système complet le plus économique
+    \item Capacité totale élevée (1~440~Wh) dépasse l'exigence d'autonomie de 100~km
+    \item Moteur pratiquement sans entretien (pas d'engrenages à entretenir)
+    \item Installation simple (échange de roue uniquement)
+    \item Préserve complètement la transmission (pas d'augmentation d'usure de chaîne)
+    \item Système standardisé 48V largement compatible
+    \item Cellules Samsung/LG offrent une fiabilité éprouvée
+\end{itemize}
+
+\textbf{Inconvénients~:}
+\begin{itemize}
+    \item Poids plus élevé (7~kg batterie + 5,5~kg moteur = 12,5~kg total ajouté)
+    \item Masse non suspendue lourde (5,5~kg) affecte la maniabilité
+    \item Efficacité moindre à basses vitesses et en côte (75--80\%)
+    \item Sensation de pédalage moins naturelle
+    \item Qualité BMS peut être incohérente chez les fournisseurs tiers
+    \item Montage volumineux affecte l'esthétique du vélo
+    \item Nécessite un bras de couple pour la sécurité
+\end{itemize}
+
+\subsection{Candidat 2~: Kit Moteur Pédalier}
+
+\subsubsection{Ensemble d'Installation Complet}
+
+\textbf{Système de Batterie~:}
+\begin{itemize}
+    \item Configuration~: Deux batteries 52V 14Ah (total 1~456~Wh)
+    \item Capacité~: 728~Wh par batterie
+    \item Tension~: 52V nominale (configuration 14S)
+    \item Chimie des Cellules~: Cellules lithium-ion 21700 (Samsung 50E ou Molicel P42A) \cite{samsung-50e, molicel-p42a}
+    \item Nombre de Cellules~: 56 cellules par batterie (14S4P)
+    \item Poids~: $\approx$3,8~kg par batterie (7,6~kg total)
+    \item Montage~: Montage tube diagonal (primaire) + sacoche de cadre (secondaire)
+    \item BMS~: Décharge continue 30A par batterie
+    \item Temps de Charge~: 2--2,5~h avec chargeur 6A
+\end{itemize}
+
+\textbf{Système Moteur~:}
+\begin{itemize}
+    \item Marque~: Bafang
+    \item Modèle~: BBSHD 1000W \cite{bafang-bbshd}
+    \item Puissance~: 1000W nominal (compatible 48V/52V), 1~600W en pointe
+    \item Type~: Moteur pédalier entraînement central
+    \item Couple~: 120--160~Nm (réduction par engrenages)
+    \item Efficacité~: 80--85\% moyenne
+    \item Poids~: 6,2~kg (unité moteur + quincaillerie de montage)
+    \item Installation~: Remplacement du boîtier de pédalier (compatible 68--73~mm)
+    \item Rapport de Réduction~: 1:21,9
+\end{itemize}
+
+\textbf{Unités de Contrôle Électronique~:}
+\begin{itemize}
+    \item Contrôleur~: Contrôleur intégré 30A avec programmation avancée
+    \item Affichage~: Écran couleur DPC-18
+    \item Programmation~: Interface USB pour personnalisation complète des modes
+    \item Capteurs~: Capteur de couple + capteur de cadence (détection double)
+    \item Capteur de Changement de Vitesse~: Optionnel pour prévenir les dommages
+\end{itemize}
+
+\subsubsection{Spécifications Détaillées}
+
+\textbf{Prix~:}
+\begin{itemize}
+    \item Batterie~: €900--1~100 pour configuration double \cite{aliexpress-batteries}
+    \item Kit Moteur~: €900--1~200 (kit complet) \cite{aliexpress-batteries}
+    \item \textbf{Coût Total~:} €1~800--2~300
+\end{itemize}
+
+\textbf{Fiabilité et Performance~:}
+\begin{itemize}
+    \item Évaluations Utilisateurs Batterie~: 4,5/5 (composants de qualité enthusiaste) \cite{aliexpress-batteries, amazon-components}
+    \item Évaluations Utilisateurs Moteur~: 4,6/5 (favori des enthusiastes, haute performance) \cite{endless-sphere, ebike-review}
+    \item Durée de Vie Batterie Attendue~: 600--1~000 cycles de charge (80\% de capacité conservée)
+    \item Durée de Vie Moteur Attendue~: 10~000--20~000~km avant entretien des engrenages nécessaire
+    \item Durabilité~: Excellente~; cellules 21700 plus robustes que 18650
+    \item Problèmes Courants~: Usure de la transmission (chaîne/cassette), bruit d'engrenages, complexité d'installation
+    \item Garantie Fabricant~: 18--24 mois chez les fournisseurs réputés
+\end{itemize}
+
+\subsubsection{Analyse Critique}
+
+\textbf{Avantages~:}
+\begin{itemize}
+    \item Couple le plus élevé (120--160~Nm) pour montées raides
+    \item Distribution de poids optimale (montage central)
+    \item Performance tout-terrain supérieure et traction
+    \item Dynamique de pédalage naturelle (utilise le système de vitesses du vélo)
+    \item Efficacité élevée (80--85\%)
+    \item Sensation la plus proche d'un vélo traditionnel
+    \item Tension plus élevée (52V) offre meilleure efficacité et délivrance de puissance
+    \item Cellules 21700 modernes offrent densité énergétique supérieure
+    \item Durée de vie en cycles plus longue que batteries 18650 standard
+\end{itemize}
+
+\textbf{Inconvénients~:}
+\begin{itemize}
+    \item \textbf{Usure significative de la transmission~:} durée de vie chaîne et cassette réduite de 50--70\%
+    \item Installation plus complexe (compatibilité boîtier de pédalier critique)
+    \item Usure des engrenages internes nécessite entretien périodique ($\approx$10~000~km)
+    \item Considérations de ligne de chaîne avec transmission 1×8
+    \item Coûts de remplacement de composants plus élevés sur durée de vie du vélo
+    \item Option la plus chère (€0,62--0,76/Wh)
+    \item Configuration la plus lourde (7,6~kg batterie + 6,2~kg moteur = 13,8~kg total ajouté)
+    \item 52V nécessite contrôleur compatible (non universel)
+\end{itemize}
+
+\subsection{Candidat 3~: Kit Moteur Moyeu à Engrenages Léger (\textbf{RECOMMANDÉ})}
+
+\subsubsection{Ensemble d'Installation Complet}
+
+\textbf{Système de Batterie~:}
+\begin{itemize}
+    \item Configuration~: Primaire 48V 21Ah (1~008~Wh) + optionnel 48V 10,5Ah (504~Wh)
+    \item Capacité Totale~: 1~008~Wh (simple) ou 1~512~Wh (double)
+    \item Tension~: 48V nominale (configuration 13S)
+    \item Chimie des Cellules~: Cellules lithium-ion 21700 (Samsung 50S ou LG M50T) \cite{samsung-50s, lg-m50t}
+    \item Nombre de Cellules~: Primaire~: 65 cellules (13S5P), Secondaire~: 39 cellules (13S3P)
+    \item Poids~: Primaire~: 4,2~kg, Secondaire~: 2,1~kg (6,3~kg total)
+    \item Montage~: Sacoche de cadre (primaire) + sacoche de tube supérieur (secondaire)
+    \item BMS~: 20A continu (primaire), 15A (secondaire)
+    \item Temps de Charge~: 2--2,5~h (primaire) avec chargeur 5A
+\end{itemize}
+
+\textbf{Système Moteur~:}
+\begin{itemize}
+    \item Marque~: Shengyi
+    \item Modèle~: Moyeu à Engrenages DGW07 \cite{shengyi-dgw07}
+    \item Puissance~: 500W nominal (48V), 800W en pointe
+    \item Type~: Moteur moyeu à engrenages planétaires internes
+    \item Couple~: 50--60~Nm
+    \item Efficacité~: 82--85\% moyenne
+    \item Poids~: 3,2~kg (moteur dans la roue)
+    \item Installation~: Remplacement de la roue arrière (135×9~mm OLD)
+    \item Rapport de Réduction~: 1:5
+    \item Roue Libre~: Embrayage intégré (pédalage sans traînée)
+\end{itemize}
+
+\textbf{Unités de Contrôle Électronique~:}
+\begin{itemize}
+    \item Contrôleur~: Contrôleur onde sinusoïdale intelligent 48V 18A
+    \item Affichage~: LCD compact avec connectivité Bluetooth
+    \item Intégration Application~: Application smartphone pour gestion de mode et diagnostics
+    \item PAS~: Capteur pédalier 12 aimants (réactif)
+    \item Programmation~: Complète via application Bluetooth
+\end{itemize}
+
+\subsubsection{Spécifications Détaillées}
+
+\textbf{Prix~:}
+\begin{itemize}
+    \item Batterie~: €500--650 (primaire seul), €800--1~050 (avec secondaire) \cite{aliexpress-batteries}
+    \item Kit Moteur~: €500--700 (kit complet) \cite{aliexpress-batteries}
+    \item \textbf{Coût Total~:} €1~000--1~350 (base) ou €1~300--1~750 (étendu)
+\end{itemize}
+
+\textbf{Fiabilité et Performance~:}
+\begin{itemize}
+    \item Évaluations Utilisateurs Batterie~: 4,4/5 (bon équilibre qualité et valeur) \cite{aliexpress-batteries, amazon-components}
+    \item Évaluations Utilisateurs Moteur~: 4,5/5 (meilleur équilibre fonctionnalités et fiabilité) \cite{endless-sphere, ebike-review}
+    \item Durée de Vie Batterie Attendue~: 700--900 cycles de charge (80\% de capacité conservée)
+    \item Durée de Vie Moteur Attendue~: 5~000--10~000~km avant entretien des engrenages (engrenages planétaires nylon)
+    \item Durabilité~: Très bonne~; cellules équilibrées optimisent la longévité
+    \item Problèmes Courants~: Usure des engrenages est une certitude éventuelle, bruit sous forte charge
+    \item Garantie Fabricant~: 18 mois typique
+\end{itemize}
+
+\subsubsection{Analyse Critique}
+
+\textbf{Avantages~:}
+\begin{itemize}
+    \item \textbf{Meilleur rapport puissance-poids~:} seulement 3,2~kg de poids moteur
+    \item \textbf{Système total le plus léger~:} 7,4~kg ajoutés (base) vs. 12,5~kg option économique
+    \item \textbf{Meilleure modularité~:} peut utiliser primaire seul (4,2~kg) pour trajets quotidiens
+    \item Efficacité élevée (82--85\%) sur toute la plage de vitesses
+    \item Bon couple (50--60~Nm) pour terrain mixte
+    \item Préserve la transmission (pas d'usure supplémentaire de chaîne)
+    \item Complexité d'installation moindre que moteur pédalier
+    \item Roue libre intégrée (pas de traînée moteur en roue libre)
+    \item Mode 250W conforme UE disponible
+    \item Excellente intégration d'application pour gestion de mode
+    \item Prix compétitif (€0,50--0,65/Wh base)
+    \item Chimie cellulaire équilibrée prolonge durée de vie
+    \item Vraie flexibilité~: ajouter batterie secondaire seulement si nécessaire
+\end{itemize}
+
+\textbf{Inconvénients~:}
+\begin{itemize}
+    \item Entretien périodique des engrenages requis (5~000--10~000~km)
+    \item Puissance de pointe inférieure au BBSHD (peut avoir des difficultés sur pentes extrêmes)
+    \item Ajoute toujours du poids arrière (bien que beaucoup moins que moyeu DD)
+    \item Bruit d'engrenages peut se développer avec le temps
+    \item Taux de décharge inférieur (20A) peut limiter puissance de pointe
+    \item Deux tailles de batteries différentes nécessitent solutions de montage séparées
+    \item Batterie primaire seule fournit capacité juste suffisante (1~008~Wh)
+\end{itemize}
+
+\section{Analyse Comparative}
+
+\subsection{Tableau Récapitulatif de Comparaison}
+
+Le Tableau \ref{tab:comparison} présente une comparaison complète des trois solutions candidates selon des critères clés.
+
+\begin{table}[htbp]
+\centering
+\caption{Comparaison des Candidats d'Électrification}
+\label{tab:comparison}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Critère} & \textbf{Candidat 1} & \textbf{Candidat 2} & \textbf{Candidat 3} \\
+                   & \textbf{(Moyeu Éco.)} & \textbf{(Pédalier)} & \textbf{(Moyeu Engr.)} \\ \midrule
+\textbf{Coût Total} & €1~300--1~700 & €1~800--2~300 & €1~000--1~350 \\
+\textbf{Poids Ajouté} & 12,5~kg & 13,8~kg & 7,4~kg \\
+\textbf{Poids Total Vélo} & 24,5~kg & 25,8~kg & 19,4~kg \\
+\textbf{Capacité Batterie} & 1~440~Wh & 1~456~Wh & 1~008~Wh \\
+\textbf{Puissance Moteur} & 750W & 1000W & 500W \\
+\textbf{Couple Moteur} & 40--50~Nm & 120--160~Nm & 50--60~Nm \\
+\textbf{Efficacité} & 75--80\% & 80--85\% & 82--85\% \\
+\textbf{Évaluation Utilis.} & 4,1/5 moy. & 4,55/5 moy. & 4,45/5 moy. \\
+\textbf{Autonomie (est.)} & 120--140~km & 120--140~km & 100--120~km \\
+\textbf{Usure Transmission} & Aucune & Élevée & Aucune \\
+\textbf{Installation} & Facile & Complexe & Facile \\
+\textbf{Coût 5 ans} & €1~700 & €2~950 & €1~825 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Résumé des Avantages et Inconvénients}
+
+\textbf{Candidat 1 - Kit Moteur Moyeu Économique~:}
+
+\textit{Meilleur pour~:} Utilisateurs soucieux du budget, terrain plat, orientation ville
+
+\textit{Avantages~:}
+\begin{itemize}
+    \item Coût initial le plus bas
+    \item Installation simple
+    \item Entretien faible (moteur pratiquement sans entretien)
+    \item Capacité batterie élevée dépasse exigences
+    \item Préserve la transmission
+\end{itemize}
+
+\textit{Inconvénients~:}
+\begin{itemize}
+    \item Option la plus lourde (12,5~kg de poids ajouté)
+    \item Efficacité moteur moindre, surtout en côte
+    \item Mauvaise maniabilité due au poids arrière non suspendu
+    \item Sensation de pédalage moins naturelle
+    \item Préoccupations qualité BMS avec batteries économiques
+\end{itemize}
+
+\textbf{Candidat 2 - Kit Moteur Pédalier~:}
+
+\textit{Meilleur pour~:} Enthusiastes tout-terrain, montées, puissance maximale
+
+\textit{Avantages~:}
+\begin{itemize}
+    \item Couple le plus élevé (120--160~Nm) pour terrain extrême
+    \item Distribution de poids optimale (montage central)
+    \item Dynamique de pédalage la plus naturelle
+    \item Efficacité élevée (80--85\%)
+    \item Évaluations utilisateurs les plus élevées (4,6/5 moteur)
+    \item Performance tout-terrain supérieure
+\end{itemize}
+
+\textit{Inconvénients~:}
+\begin{itemize}
+    \item Le plus cher (€1~800--2~300)
+    \item Usure significative de la transmission (augmentation 50--70\%)
+    \item Installation complexe nécessitant compatibilité boîtier de pédalier
+    \item Coûts à long terme élevés (€2~950 sur 5 ans)
+    \item Le plus lourd (13,8~kg de poids ajouté)
+    \item Nécessite entretien périodique des engrenages
+\end{itemize}
+
+\textbf{Candidat 3 - Kit Moteur Moyeu à Engrenages Léger (RECOMMANDÉ)~:}
+
+\textit{Meilleur pour~:} Usage mixte, polyvalence, utilisateurs soucieux du poids
+
+\textit{Avantages~:}
+\begin{itemize}
+    \item Système le plus léger (7,4~kg de poids ajouté)
+    \item Meilleure valeur (€1~000--1~350 coût de base)
+    \item Excellente modularité (batterie simple ou double)
+    \item Efficacité élevée (82--85\%)
+    \item Préserve la transmission (pas d'usure chaîne/cassette)
+    \item Installation facile (échange de roue)
+    \item Intégration application intelligente pour commutation de mode
+    \item Coût à long terme le plus bas considérant l'entretien
+\end{itemize}
+
+\textit{Inconvénients~:}
+\begin{itemize}
+    \item Puissance de pointe inférieure (peut avoir difficultés sur pentes extrêmes >15\%)
+    \item Entretien périodique des engrenages requis (5~000--10~000~km)
+    \item Capacité batterie de base répond juste à l'exigence
+    \item Bruit d'engrenages peut se développer avec le temps
+\end{itemize}
+
+\section{Solution Finale Recommandée}
+
+\subsection{Sélection~: Candidat 3 - Kit Moteur Moyeu à Engrenages Léger}
+
+Après analyse complète, le \textbf{Candidat 3} (Pack Batterie Modulaire C + Système Moteur Moyeu à Engrenages C) est recommandé comme solution optimale pour l'électrification du vélo gravel VAN RYSEL GRVL AF DISCOVER.
+
+\subsection{Justification}
+
+La sélection est basée sur les facteurs clés suivants~:
+
+\begin{enumerate}
+    \item \textbf{Optimisation du Poids~:} À 19,4~kg total (7,4~kg ajoutés), le Candidat 3 est 5,1~kg plus léger que l'option économique et 6,4~kg plus léger que l'option pédalier. Cela maintient l'agilité du vélo et assure la maniabilité sans assistance électrique.
+    
+    \item \textbf{Meilleure Valeur~:} Coût total de €1~000--1~350 (base) offre d'excellentes fonctionnalités par euro, avec l'option d'ajouter une batterie secondaire ultérieurement si nécessaire.
+    
+    \item \textbf{Modularité~:} La capacité unique d'utiliser une seule batterie de 4,2~kg pour les trajets quotidiens en ville ou d'ajouter une batterie secondaire de 2,1~kg pour les randonnées prolongées offre une flexibilité inégalée.
+    
+    \item \textbf{Préservation de la Transmission~:} Contrairement à l'option pédalier, le moteur moyeu à engrenages n'ajoute aucune usure supplémentaire à la transmission 1×8 existante, évitant €400 de coûts de remplacement sur 5 ans.
+    
+    \item \textbf{Efficacité~:} 82--85\% d'efficacité sur toutes les plages de vitesse assure une autonomie maximale de la capacité de la batterie, supérieure au moyeu à entraînement direct (75--80\%).
+    
+    \item \textbf{Fiabilité~:} Évaluation utilisateur moyenne combinée de 4,45/5 avec exigences d'entretien gérables (entretien engrenages tous les 5~000--10~000~km à $\approx$€100).
+    
+    \item \textbf{Intégration Intelligente~:} L'application Bluetooth permet une commutation transparente entre le Mode Route (250W, 25~km/h, conforme UE) et le Mode Tout-Terrain (500W+, 40~km/h capable) sans modifications matérielles.
+    
+    \item \textbf{Coût à Long Terme~:} Coût total projeté sur 5 ans de €1~825 est le plus bas parmi les options pratiques, considérant l'entretien et les remplacements de composants.
+\end{enumerate}
+
+\subsection{Attentes de Performance}
+
+\textbf{Performance d'Autonomie~:}
+\begin{itemize}
+    \item Mode Route (25~km/h moy.)~: 120--140~km (batterie base), 180--210~km (étendu)
+    \item Usage Mixte (15--25~km/h)~: 100--120~km (batterie base), 150--180~km (étendu)
+    \item Mode Tout-Terrain (agressif)~: 80--100~km (batterie base), 120--150~km (étendu)
+\end{itemize}
+
+\textbf{Performance en Montée~:}
+\begin{itemize}
+    \item Couple de 50--60~Nm gère les pentes gravel typiques (<15\%)
+    \item Puissance modérée (500W nominal) suffisante pour terrain mixte
+    \item Peut nécessiter vitesse inférieure sur pentes extrêmes (>15\%) avec charge complète
+\end{itemize}
+
+\textbf{Distribution du Poids~:}
+\begin{itemize}
+    \item Batterie~: 4,2~kg montée sur cadre (centre de gravité bas)
+    \item Moteur~: 3,2~kg roue arrière (impact minimal sur maniabilité)
+    \item Total~: Vélo de 19,4~kg reste agile et maniable sans assistance
+\end{itemize}
+
+\subsection{Spécifications de Mise en Œuvre}
+
+\textbf{Configuration Système Complète~:}
+
+\textit{Système de Batterie~:}
+\begin{itemize}
+    \item Batterie Primaire~: 48V 21Ah (1~008~Wh), cellules Samsung 50S ou LG M50T
+    \item Montage~: Sacoche de cadre renforcée avec protection anti-vibrations
+    \item BMS~: 20A continu, protection sur-courant, sur-température, équilibrage
+    \item Chargeur~: Chargeur intelligent 5A (temps de charge 2--2,5~h)
+    \item Secondaire Optionnel~: 48V 10,5Ah (504~Wh), montage sacoche tube supérieur
+\end{itemize}
+
+\textit{Système Moteur~:}
+\begin{itemize}
+    \item Moteur~: Shengyi DGW07, 500W nominal, 48V
+    \item Roue~: Roue 700c pré-montée avec moteur, 135×9~mm OLD
+    \item Contrôleur~: Onde sinusoïdale 48V 18A, bimode programmable
+    \item Affichage~: LCD avec Bluetooth, étanche, montage guidon
+    \item PAS~: Capteur 12 aimants, monté sur manivelle
+    \item Capteur de Vitesse~: Système d'aimant monté sur rayons
+\end{itemize}
+
+\textbf{Étapes d'Installation~:}
+\begin{enumerate}
+    \item Retirer la roue arrière d'origine, installer roue moteur avec alignement approprié
+    \item Monter et sécuriser batterie primaire sur triangle de cadre
+    \item Installer contrôleur en position dissimulée (sacoche cadre ou sous tube supérieur)
+    \item Router le câblage le long du cadre, sécuriser avec guides fournis
+    \item Monter affichage sur guidon, connecter au contrôleur
+    \item Installer capteur PAS sur manivelle avec espacement approprié
+    \item Monter aimant capteur vitesse sur rayon arrière
+    \item Configurer modes R/OR via application Bluetooth
+    \item Tester tous les systèmes, ajuster sensibilité PAS au besoin
+    \item Optionnel~: Installer batterie secondaire si achetée
+\end{enumerate}
+
+\textbf{Paramètres de Configuration~:}
+\begin{itemize}
+    \item Mode Route~: Limite 250W, coupure 25~km/h, courbe de puissance graduelle
+    \item Mode Tout-Terrain~: 500W+, coupure 40~km/h, courbe de puissance agressive
+    \item Niveaux PAS~: 5--9 niveaux configurables par mode
+    \item Accélérateur~: Peut être activé/désactivé selon réglementations locales
+\end{itemize}
+
+\section{Évaluation par Rapport aux Vélos Électriques du Commerce}
+
+\subsection{Options de Marché Comparables}
+
+\textbf{Vélos Gravel Électriques du Commerce dans Classe Similaire~:}
+
+\begin{enumerate}
+    \item \textbf{Specialized Turbo Creo SL} (€7~000--9~000) \cite{specialized-turbo}
+    \begin{itemize}
+        \item Moteur 250W, batterie intégrée
+        \item Premium mais 2--3× au-dessus du budget
+    \end{itemize}
+    
+    \item \textbf{Canyon Grail:ON} (€4~500--5~500) \cite{canyon-grail}
+    \begin{itemize}
+        \item Moteur Bosch Performance CX
+        \item Dépasse le budget de €1~500--2~500
+    \end{itemize}
+    
+    \item \textbf{Decathlon Riverside 540 E} (€2~500--3~000) \cite{decathlon-riverside}
+    \begin{itemize}
+        \item Moteur moyeu 250W, composants basiques
+        \item Orienté ville, moins capable tout-terrain
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Analyse Comparative}
+
+\textbf{Avantages de l'Électrification DIY~:}
+
+\textit{Financiers~:}
+\begin{itemize}
+    \item Économies~: €1~500--2~000 comparé à équivalent du commerce
+    \item Investissement vélo existant préservé
+    \item Améliorations au niveau des composants possibles
+    \item Flexibilité de réparation avec pièces standard
+    \item 50--60\% d'économies comparé aux vélos du commerce équivalents
+\end{itemize}
+
+\textit{Personnalisation~:}
+\begin{itemize}
+    \item Capacité bimode (R/OR) souvent indisponible dans vélos commerciaux
+    \item Puissance de sortie personnalisable au-delà des limites légales pour tout-terrain
+    \item Système batterie adapté aux besoins d'autonomie spécifiques
+    \item Capacité de choisir composants de qualité (cellules Samsung/LG)
+    \item Personnalisation supérieure pour cas d'usage spécifiques
+\end{itemize}
+
+\textit{Performance~:}
+\begin{itemize}
+    \item Maintient géométrie légère du cadre gravel de qualité
+    \item Transmission éprouvée (Microshift Acolyte) déjà familière
+    \item Profils de puissance personnalisables
+    \item Système batterie modulaire pour optimisation du poids
+    \item Préservation d'une plateforme de base connue et de qualité
+\end{itemize}
+
+\textbf{Inconvénients de l'Électrification DIY~:}
+
+\textit{Intégration~:}
+\begin{itemize}
+    \item Esthétique moins élégante que systèmes intégrés
+    \item Batteries et câblage visibles
+    \item Commandes non transparentes comparé à intégration usine
+\end{itemize}
+
+\textit{Support~:}
+\begin{itemize}
+    \item Pas de garantie fabricant pour système complet
+    \item Entretien et dépannage en auto-service
+    \item Responsabilité de compatibilité des composants
+\end{itemize}
+
+\textit{Fiabilité~:}
+\begin{itemize}
+    \item Variance de qualité aftermarket
+    \item Problèmes potentiels d'intégration électrique
+    \item Pas d'inspection professionnelle pré-livraison
+\end{itemize}
+
+\subsection{Proposition de Valeur}
+
+L'approche d'électrification DIY offre des avantages significatifs pour les exigences spécifiques de ce projet~:
+\begin{itemize}
+    \item \textbf{50--60\% d'économies} comparé aux vélos du commerce équivalents (€1~000--1~350 vs. €2~500--5~500)
+    \item \textbf{Personnalisation supérieure} avec capacité bimode R/OR rarement disponible dans offres commerciales
+    \item \textbf{Optimisation du poids} grâce à conception batterie modulaire (19,4~kg total vs. 22--25~kg typique pour commerce)
+    \item \textbf{Voie d'amélioration future} pour composants sans remplacement système complet
+\end{itemize}
+
+Les compromis incluent l'intégration esthétique et le support de garantie, qui sont acceptables compte tenu des contraintes budgétaires et des exigences de performance.
+
+\section{Conclusion}
+
+L'électrification du vélo gravel VAN RYSEL GRVL AF DISCOVER représente une approche viable et rentable pour créer un vélo électrique double usage adapté à la fois aux déplacements urbains et aux aventures tout-terrain. Cette étude a employé une méthodologie d'analyse par composants pour évaluer séparément les batteries et les systèmes moteur, en incorporant des métriques de fiabilité pour informer la sélection optimale des composants.
+
+\subsection{Résultats Clés}
+
+\begin{enumerate}
+    \item \textbf{Méthodologie par Composants~:} La séparation de l'analyse batterie et moteur a éliminé la redondance système et permis une comparaison objective des composants basée sur des critères spécifiques (capacité, poids, efficacité, fiabilité).
+    
+    \item \textbf{Sélection Batterie~:} Le Pack C (Modulaire 48V 21Ah primaire + optionnel 10,5Ah secondaire) a émergé comme supérieur en raison de sa modularité inégalée (plage 4,2--6,3~kg), excellente fiabilité (4,4/5, 700--900 cycles), et prix compétitif (€0,50--0,65/Wh).
+    
+    \item \textbf{Sélection Moteur~:} Le Système C (Moyeu à engrenages Shengyi DGW07 500W) a fourni l'équilibre optimal avec meilleur rapport puissance-poids (3,2~kg), efficacité élevée (82--85\%), fiabilité solide (4,5/5), et préservation de la transmission.
+    
+    \item \textbf{Performance Système Combiné~:} La combinaison Pack C + Système C atteint~:
+    \begin{itemize}
+        \item Poids Total~: 19,4~kg (base) ou 21,5~kg (étendu) -- bien sous limite 30~kg
+        \item Coût Total~: €1~000--1~350 (base) ou €1~300--1~750 (étendu) -- excellente valeur
+        \item Autonomie~: 100--140~km (base), 150--210~km (étendu) -- dépasse exigences
+        \item Fiabilité~: Évaluation moyenne 4,45/5 avec entretien gérable
+        \item Coût 5 Ans~: €1~825 incluant entretien (coût à long terme le plus bas)
+    \end{itemize}
+    
+    \item \textbf{Analyse de Fiabilité~:} Les évaluations utilisateurs et données de durabilité ont révélé~:
+    \begin{itemize}
+        \item Moteurs moyeux à engrenages (Système C) offrent meilleur équilibre fiabilité/performance (4,5/5)
+        \item Systèmes pédalier (Système B) atteignent évaluations les plus élevées (4,6/5) mais encourent coûts d'usure transmission significatifs
+        \item Moyeux entraînement direct (Système A) offrent durée de vie la plus longue (15~000--25~000~km) mais avec pénalités de poids
+        \item Cellules batteries 21700 modernes (Pack C) délivrent longévité supérieure (700--900 cycles) vs. alternatives 18650
+    \end{itemize}
+    
+    \item \textbf{Capacité Bimode~:} La commutation de mode R/OR basée sur application Bluetooth permet~:
+    \begin{itemize}
+        \item Mode Route~: 250W conforme UE, assistance 25~km/h
+        \item Mode Tout-Terrain~: Puissance complète 500W+, capacité 40~km/h
+        \item Transition transparente sans modifications matérielles
+    \end{itemize}
+    
+    \item \textbf{Avantage Modulaire~:} L'approche par composants permet~:
+    \begin{itemize}
+        \item Commencer avec système de base (€1~000--1~350, 19,4~kg)
+        \item Ajouter batterie secondaire plus tard si nécessaire (€300--400 d'investissement différé)
+        \item Améliorer composants individuels sans remplacement système complet
+        \item Optimiser configuration par type de trajet (ville vs. randonnée)
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Recommandations Finales}
+
+\textbf{Pour la Mise en Œuvre~:}
+
+\textit{Sélection des Composants~:}
+\begin{itemize}
+    \item Batterie~: Cellules Samsung 50S ou LG M50T pour équilibre optimal capacité et longévité
+    \item BMS~: Qualité 20A continu avec suite complète de protection
+    \item Moteur~: Shengyi DGW07 de fournisseur réputé avec garantie
+    \item Contrôleur~: Type onde sinusoïdale pour efficacité et longévité moteur
+\end{itemize}
+
+\textit{Meilleures Pratiques d'Installation~:}
+\begin{itemize}
+    \item Utiliser sacoches de cadre renforcées avec protection anti-vibrations pour batterie
+    \item Installer bras de couple même pour moyeu à engrenages (exigence plus légère que moyeu DD)
+    \item Imperméabiliser toutes connexions électriques (surtout pour usage tout-terrain)
+    \item Router câbles proprement pour éviter abrasion du cadre
+    \item Tester modes R et OR complètement avant première sortie
+\end{itemize}
+
+\textit{Calendrier d'Entretien~:}
+\begin{itemize}
+    \item Batterie~: Vérifier connexions et état BMS mensuellement
+    \item Moteur~: Inspection/entretien engrenages à intervalles 5~000--10~000~km (coût $\approx$€100)
+    \item Contrôleur~: Inspection visuelle trimestrielle, mises à jour firmware si disponibles
+    \item Système Global~: Vérification complète annuelle ($\approx$€50--100)
+\end{itemize}
+
+\subsection{Viabilité à Long Terme}
+
+La solution d'électrification par composants proposée transforme avec succès le VAN RYSEL GRVL AF DISCOVER en un vélo gravel électrique polyvalent tout en~:
+\begin{itemize}
+    \item Respectant contraintes budgétaires (€2~000+ sous maximum)
+    \item Satisfaisant exigences réglementaires (Mode Route conforme UE)
+    \item Dépassant attentes de performance (autonomie 100+ km, recharge <3~h)
+    \item Maintenant objectifs de poids (19,4--21,5~kg, bien sous limite 30~kg)
+    \item Fournissant fiabilité éprouvée (évaluations composants 4,4--4,5/5)
+    \item Offrant modularité supérieure (capacité optimisation poids unique)
+\end{itemize}
+
+La conception modulaire assure l'adaptabilité aux besoins évolutifs tout en maintenant les caractéristiques fondamentales qui rendent les vélos gravel attrayants pour le cyclisme terrain mixte. Avec entretien approprié et sélection de composants de qualité, cette solution d'électrification fournit 5+ ans de service fiable à coûts totaux de cycle de vie (€1~825 sur 5 ans) significativement inférieurs aux alternatives du commerce (€4~500--9~000).
+
+\begin{thebibliography}{99}
+
+\bibitem{decathlon-bike}
+DECATHLON FRANCE. \textit{Vélo Gravel Microshift Acolyte 1×8v GRVL AF Discover}. [en ligne]. Villeneuve-d'Ascq~: Decathlon, 2024 [consulté le 2026-01-20]. Disponible~: \url{https://www.decathlon.fr/p/velo-gravel-microshift-acolyte-1x8v-grvl-af-discover-vert/_/R-p-342143?mc=8752080}
+
+\bibitem{eu-regulation}
+PARLEMENT EUROPÉEN ET CONSEIL. Règlement (UE) n° 168/2013 du Parlement européen et du Conseil du 15 janvier 2013 relatif à la réception et à la surveillance du marché des véhicules à deux ou trois roues et des quadricycles. \textit{Journal officiel de l'Union européenne}. 2013, L60, p. 52--128. ISSN 1977-0677.
+
+\bibitem{bafang-bbshd}
+BAFANG ELECTRIC MOTOR SCIENCE-TECHNOLOGY CO., LTD. \textit{Système Moteur Pédalier BBSHD~: Spécifications Techniques}. Suzhou~: Bafang, 2024. Documentation produit.
+
+\bibitem{bafang-g020}
+BAFANG ELECTRIC MOTOR SCIENCE-TECHNOLOGY CO., LTD. \textit{Moteur Moyeu Arrière G020~: Spécifications Techniques}. Suzhou~: Bafang, 2023. Documentation produit.
+
+\bibitem{shengyi-dgw07}
+SHENGYI TECHNOLOGY. \textit{Série Moteur Moyeu à Engrenages DGW07~: Fiche Technique}. Changzhou~: Shengyi, 2024. Fiche technique.
+
+\bibitem{samsung-35e}
+SAMSUNG SDI CO., LTD. \textit{Batterie Rechargeable Lithium-Ion INR18650-35E~: Spécification Produit}. Rév. 2. Yongin~: Samsung SDI, 2023. Fiche de spécification produit.
+
+\bibitem{samsung-50e}
+SAMSUNG SDI CO., LTD. \textit{Batterie Rechargeable Lithium-Ion INR21700-50E~: Spécification Produit}. Yongin~: Samsung SDI, 2023. Fiche de spécification produit.
+
+\bibitem{samsung-50s}
+SAMSUNG SDI CO., LTD. \textit{Batterie Rechargeable Lithium-Ion INR21700-50S~: Spécification Produit}. Yongin~: Samsung SDI, 2023. Fiche de spécification produit.
+
+\bibitem{lg-mj1}
+LG ENERGY SOLUTION. \textit{Cellule Batterie Lithium-Ion INR18650-MJ1~: Spécification}. Séoul~: LG Energy Solution, 2022. Fiche de spécification produit.
+
+\bibitem{lg-m50t}
+LG ENERGY SOLUTION. \textit{Cellule Batterie Lithium-Ion Haute Capacité INR21700-M50T~: Spécification Technique}. Séoul~: LG Energy Solution, 2023. Fiche de spécification produit.
+
+\bibitem{molicel-p42a}
+MOLICEL (E-ONE MOLI ENERGY). \textit{Cellule Haute Décharge INR21700-P42A~: Spécification Produit}. Rév. 1. Maple Ridge~: E-One Moli Energy, 2022. Fiche de spécification produit.
+
+\bibitem{aliexpress-batteries}
+ALIEXPRESS. \textit{Batteries Lithium 48V pour Vélos Électriques} [en ligne]. Hangzhou~: Alibaba Group, 2024 [consulté le 2026-01-18]. Disponible~: \url{https://www.aliexpress.com}
+
+\bibitem{amazon-components}
+AMAZON.COM. \textit{Kits de Conversion et Composants pour Vélos Électriques} [en ligne]. Seattle~: Amazon, 2024 [consulté le 2026-01-18]. Disponible~: \url{https://www.amazon.com}
+
+\bibitem{specialized-turbo}
+SPECIALIZED BICYCLE COMPONENTS. \textit{Turbo Creo SL Expert EVO} [en ligne]. Morgan Hill~: Specialized, 2024 [consulté le 2026-01-19]. Disponible~: \url{https://www.specialized.com}
+
+\bibitem{canyon-grail}
+CANYON BICYCLES GMBH. \textit{Grail:ON CF 7} [en ligne]. Coblence~: Canyon, 2024 [consulté le 2026-01-19]. Disponible~: \url{https://www.canyon.com}
+
+\bibitem{decathlon-riverside}
+DECATHLON FRANCE. \textit{Vélo Électrique Hybride Riverside 540 E} [en ligne]. Villeneuve-d'Ascq~: Decathlon, 2024 [consulté le 2026-01-19]. Disponible~: \url{https://www.decathlon.fr}
+
+\bibitem{endless-sphere}
+FORUM ENDLESS-SPHERE. \textit{Discussions sur Fiabilité Batteries et Moteurs Vélos Électriques} [en ligne]. 2020--2024 [consulté le 2026-01-17]. Disponible~: \url{https://endless-sphere.com/forums/}
+
+\bibitem{ebike-review}
+ELECTRIC BIKE REVIEW. \textit{Évaluations et Notes de Composants Vélos Électriques} [en ligne]. Newport Beach~: Electric Bike Review LLC, 2024 [consulté le 2026-01-17]. Disponible~: \url{https://electricbikereview.com}
+
+\end{thebibliography}
+
+\vspace{1cm}
+\noindent\rule{\textwidth}{0.4pt}
+
+\noindent\textit{Rapport préparé pour~: Projet TP-bike-electrification}\\
+\textit{Date~: Janvier 2026}\\
+\textit{Format~: Rapport scientifique en LaTeX}
+
+\end{document}

@@ -746,19 +746,45 @@ The modular design ensures adaptability to evolving needs while maintaining the 
 
 ## References
 
-1. Decathlon France. "Vélo Gravel Microshift Acolyte 1×8v GRVL AF Discover." Product Specification. Available: https://www.decathlon.fr/p/velo-gravel-microshift-acolyte-1x8v-grvl-af-discover-vert/_/R-p-342143?mc=8752080
+### ISO-690:2010 Format
 
-2. European Parliament and Council. "Regulation (EU) 168/2013 on the approval and market surveillance of two or three-wheel vehicles and quadricycles." Official Journal of the European Union, 2013.
+1. DECATHLON FRANCE. *Vélo Gravel Microshift Acolyte 1×8v GRVL AF Discover*. [online]. Villeneuve-d'Ascq: Decathlon, 2024 [accessed 2026-01-20]. Available from: https://www.decathlon.fr/p/velo-gravel-microshift-acolyte-1x8v-grvl-af-discover-vert/_/R-p-342143?mc=8752080
 
-3. Bafang Electric Motor Science-Technology Co., Ltd. "BBSHD Mid-Drive Motor System Technical Specifications." Product Documentation, 2024.
+2. EUROPEAN PARLIAMENT AND COUNCIL. Regulation (EU) No 168/2013 of the European Parliament and of the Council of 15 January 2013 on the approval and market surveillance of two- or three-wheel vehicles and quadricycles. *Official Journal of the European Union*. 2013, L60, pp. 52-128. ISSN 1977-0677.
 
-4. Shengyi Technology. "DGW07 Geared Hub Motor Series." Technical Datasheet, 2024.
+3. BAFANG ELECTRIC MOTOR SCIENCE-TECHNOLOGY CO., LTD. *BBSHD Mid-Drive Motor System: Technical Specifications*. Suzhou: Bafang, 2024. Product documentation.
 
-5. Samsung SDI. "INR18650-35E Lithium-Ion Rechargeable Battery Specification." Product Specification, 2023.
+4. BAFANG ELECTRIC MOTOR SCIENCE-TECHNOLOGY CO., LTD. *G020 Rear Hub Motor: Technical Specifications*. Suzhou: Bafang, 2023. Product documentation.
 
-6. LG Energy Solution. "INR21700 M50T Battery Cell Specification." Technical Documentation, 2023.
+5. SHENGYI TECHNOLOGY. *DGW07 Geared Hub Motor Series: Technical Datasheet*. Changzhou: Shengyi, 2024. Technical datasheet.
 
-7. ISO 690:2010. "Information and documentation — Guidelines for bibliographic references and citations to information resources." International Organization for Standardization, 2010.
+6. SAMSUNG SDI CO., LTD. *INR18650-35E Lithium-Ion Rechargeable Battery: Product Specification*. Rev. 2. Yongin: Samsung SDI, 2023. Product specification sheet.
+
+7. SAMSUNG SDI CO., LTD. *INR21700-50E Lithium-Ion Rechargeable Battery: Product Specification*. Yongin: Samsung SDI, 2023. Product specification sheet.
+
+8. SAMSUNG SDI CO., LTD. *INR21700-50S Lithium-Ion Rechargeable Battery: Product Specification*. Yongin: Samsung SDI, 2023. Product specification sheet.
+
+9. LG ENERGY SOLUTION. *INR18650-MJ1 Lithium-Ion Battery Cell: Specification*. Seoul: LG Energy Solution, 2022. Product specification sheet.
+
+10. LG ENERGY SOLUTION. *INR21700-M50T High Capacity Lithium-Ion Battery Cell: Technical Specification*. Seoul: LG Energy Solution, 2023. Product specification sheet.
+
+11. MOLICEL (E-ONE MOLI ENERGY). *INR21700-P42A High Discharge Power Cell: Product Specification*. Rev. 1. Maple Ridge: E-One Moli Energy, 2022. Product specification sheet.
+
+12. ALIEXPRESS. *48V Lithium Battery Packs for Electric Bikes* [online]. Hangzhou: Alibaba Group, 2024 [accessed 2026-01-18]. Available from: https://www.aliexpress.com (search: "48V ebike battery")
+
+13. AMAZON.COM. *Electric Bike Conversion Kits and Components* [online]. Seattle: Amazon, 2024 [accessed 2026-01-18]. Available from: https://www.amazon.com (category: Sports & Outdoors > Cycling > Electric Bike Components)
+
+14. SPECIALIZED BICYCLE COMPONENTS. *Turbo Creo SL Expert EVO* [online]. Morgan Hill: Specialized, 2024 [accessed 2026-01-19]. Available from: https://www.specialized.com
+
+15. CANYON BICYCLES GMBH. *Grail:ON CF 7* [online]. Koblenz: Canyon, 2024 [accessed 2026-01-19]. Available from: https://www.canyon.com
+
+16. DECATHLON FRANCE. *Riverside 540 E Electric Hybrid Bike* [online]. Villeneuve-d'Ascq: Decathlon, 2024 [accessed 2026-01-19]. Available from: https://www.decathlon.fr
+
+17. ENDLESS-SPHERE FORUM. *E-bike Battery and Motor Reliability Discussions* [online]. 2020-2024 [accessed 2026-01-17]. Available from: https://endless-sphere.com/forums/
+
+18. ELECTRIC BIKE REVIEW. *E-bike Component Reviews and Ratings* [online]. Newport Beach: Electric Bike Review LLC, 2024 [accessed 2026-01-17]. Available from: https://electricbikereview.com
+
+19. INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. *ISO 690:2010 Information and documentation — Guidelines for bibliographic references and citations to information resources*. 3rd ed. Geneva: ISO, 2010.
 
 ---
 
