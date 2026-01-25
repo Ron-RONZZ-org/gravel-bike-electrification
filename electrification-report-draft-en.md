@@ -760,29 +760,31 @@ The modular design ensures adaptability to evolving needs while maintaining the 
 
 6. SAMSUNG SDI CO., LTD. *INR18650-35E Lithium-Ion Rechargeable Battery: Product Specification*. Rev. 2. Yongin: Samsung SDI, 2023. Product specification sheet.
 
-7. SAMSUNG SDI CO., LTD. *INR21700-50S Lithium-Ion Rechargeable Battery: Product Specification*. Yongin: Samsung SDI, 2023. Product specification sheet.
+7. SAMSUNG SDI CO., LTD. *INR21700-50E Lithium-Ion Rechargeable Battery: Product Specification*. Yongin: Samsung SDI, 2023. Product specification sheet.
 
-8. LG ENERGY SOLUTION. *INR18650-MJ1 Lithium-Ion Battery Cell: Specification*. Seoul: LG Energy Solution, 2022. Product specification sheet.
+8. SAMSUNG SDI CO., LTD. *INR21700-50S Lithium-Ion Rechargeable Battery: Product Specification*. Yongin: Samsung SDI, 2023. Product specification sheet.
 
-9. LG ENERGY SOLUTION. *INR21700-M50T High Capacity Lithium-Ion Battery Cell: Technical Specification*. Seoul: LG Energy Solution, 2023. Product specification sheet.
+9. LG ENERGY SOLUTION. *INR18650-MJ1 Lithium-Ion Battery Cell: Specification*. Seoul: LG Energy Solution, 2022. Product specification sheet.
 
-10. MOLICEL (E-ONE MOLI ENERGY). *INR21700-P42A High Discharge Power Cell: Product Specification*. Rev. 1. Maple Ridge: E-One Moli Energy, 2022. Product specification sheet.
+10. LG ENERGY SOLUTION. *INR21700-M50T High Capacity Lithium-Ion Battery Cell: Technical Specification*. Seoul: LG Energy Solution, 2023. Product specification sheet.
 
-11. ALIEXPRESS. *48V Lithium Battery Packs for Electric Bikes* [online]. Hangzhou: Alibaba Group, 2024 [accessed 2026-01-18]. Available from: https://www.aliexpress.com (search: "48V ebike battery")
+11. MOLICEL (E-ONE MOLI ENERGY). *INR21700-P42A High Discharge Power Cell: Product Specification*. Rev. 1. Maple Ridge: E-One Moli Energy, 2022. Product specification sheet.
 
-12. AMAZON.COM. *Electric Bike Conversion Kits and Components* [online]. Seattle: Amazon, 2024 [accessed 2026-01-18]. Available from: https://www.amazon.com (category: Sports & Outdoors > Cycling > Electric Bike Components)
+12. ALIEXPRESS. *48V Lithium Battery Packs for Electric Bikes* [online]. Hangzhou: Alibaba Group, 2024 [accessed 2026-01-18]. Available from: https://www.aliexpress.com (search: "48V ebike battery")
 
-13. SPECIALIZED BICYCLE COMPONENTS. *Turbo Creo SL Expert EVO* [online]. Morgan Hill: Specialized, 2024 [accessed 2026-01-19]. Available from: https://www.specialized.com
+13. AMAZON.COM. *Electric Bike Conversion Kits and Components* [online]. Seattle: Amazon, 2024 [accessed 2026-01-18]. Available from: https://www.amazon.com (category: Sports & Outdoors > Cycling > Electric Bike Components)
 
-14. CANYON BICYCLES GMBH. *Grail:ON CF 7* [online]. Koblenz: Canyon, 2024 [accessed 2026-01-19]. Available from: https://www.canyon.com
+14. SPECIALIZED BICYCLE COMPONENTS. *Turbo Creo SL Expert EVO* [online]. Morgan Hill: Specialized, 2024 [accessed 2026-01-19]. Available from: https://www.specialized.com
 
-15. DECATHLON FRANCE. *Riverside 540 E Electric Hybrid Bike* [online]. Villeneuve-d'Ascq: Decathlon, 2024 [accessed 2026-01-19]. Available from: https://www.decathlon.fr
+15. CANYON BICYCLES GMBH. *Grail:ON CF 7* [online]. Koblenz: Canyon, 2024 [accessed 2026-01-19]. Available from: https://www.canyon.com
 
-16. ENDLESS-SPHERE FORUM. *E-bike Battery and Motor Reliability Discussions* [online]. 2020-2024 [accessed 2026-01-17]. Available from: https://endless-sphere.com/forums/
+16. DECATHLON FRANCE. *Riverside 540 E Electric Hybrid Bike* [online]. Villeneuve-d'Ascq: Decathlon, 2024 [accessed 2026-01-19]. Available from: https://www.decathlon.fr
 
-17. ELECTRIC BIKE REVIEW. *E-bike Component Reviews and Ratings* [online]. Newport Beach: Electric Bike Review LLC, 2024 [accessed 2026-01-17]. Available from: https://electricbikereview.com
+17. ENDLESS-SPHERE FORUM. *E-bike Battery and Motor Reliability Discussions* [online]. 2020-2024 [accessed 2026-01-17]. Available from: https://endless-sphere.com/forums/
 
-18. INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. *ISO 690:2010 Information and documentation — Guidelines for bibliographic references and citations to information resources*. 3rd ed. Geneva: ISO, 2010.
+18. ELECTRIC BIKE REVIEW. *E-bike Component Reviews and Ratings* [online]. Newport Beach: Electric Bike Review LLC, 2024 [accessed 2026-01-17]. Available from: https://electricbikereview.com
+
+19. INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. *ISO 690:2010 Information and documentation — Guidelines for bibliographic references and citations to information resources*. 3rd ed. Geneva: ISO, 2010.
 
 ---
 
